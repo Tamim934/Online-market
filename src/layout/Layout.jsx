@@ -74,13 +74,15 @@ const Layout = () => {
           <div className='xs:flex xs:items-center xs:gap-[24px]'>
             <input type="search" name="" id="" placeholder='What are you looking for?' className='w-[243px] h-[38px] rounded-[4px] bg-[#F5F5F5] text-[#7A7A7A] text-[12px] font-medium py-[7px] pl-[20px] pr-[12px] outline-none' data-aos="fade-left" data-aos-duration="1250"/>
             <div className='flex items-center gap-[16px]'>
-            <img src={notificationicon} alt="" data-aos="fade-left" data-aos-duration="1250"/>
+            <Link to="wishlist">
+              <img src={notificationicon} alt="" data-aos="fade-left" data-aos-duration="1250"/>
+            </Link>
             <img src={carticon} alt="" data-aos="fade-left" data-aos-duration="1250"/>
             </div>
-          <div className='xs:hidden xl:block' data-aos="zoom-in" data-aos-duration="1250">
+          <div className='xs:hidden lg:block' data-aos="zoom-in" data-aos-duration="1250">
             <Switcher/>
           </div>
-          <div className='xs:block xl:hidden' data-aos="zoom-in" data-aos-duration="1250">
+          <div className='xs:block lg:hidden' data-aos="zoom-in" data-aos-duration="1250">
             <Burger/>
           </div>
           </div>
@@ -100,7 +102,7 @@ const Layout = () => {
 
         <br /><br /><br />
 
-        <div className='xs:m-auto xs:w-[85%] xs:flex xs:justify-between'>
+        <div className='xs:m-auto xs:w-[85%] xs:flex xs:flex-col xs:gap-[48px] sm:flex-row sm:gap-0  sm:justify-between'>
 
           <div className='flex flex-col gap-[24px]' data-aos="zoom-out-right" data-aos-duration="1250">
             <h1 className='text-white text-[24px] font-bold leading-[24px] tracking-[0.72px]'>Exclusive</h1>
@@ -111,7 +113,7 @@ const Layout = () => {
             </div>
           </div>
 
-          <div className='flex flex-col gap-[24px]' data-aos="zoom-in-right" data-aos-duration="1250">
+          <div className='xs:hidden xl:flex flex-col gap-[24px]' data-aos="zoom-in-right" data-aos-duration="1250">
             <h4 className='text-white text-[20px] font-medium leading-[28px]'>Support</h4>
             <div className='flex flex-col gap-[16px]'>
             <p className='text-white text-[16px] leading-[24px] font-light'>111 Bijoy sarani, Dhaka,<br />DH 1515, Bangladesh.</p>
@@ -120,7 +122,7 @@ const Layout = () => {
             </div>
           </div>
 
-          <div className='flex flex-col gap-[24px]' data-aos="zoom-out-down" data-aos-duration="1250">
+          <div className='xs:hidden md:flex flex-col gap-[24px]' data-aos="zoom-out-down" data-aos-duration="1250">
             <h4 className='text-white text-[20px] font-medium leading-[28px]'>Account</h4>
             <div className='flex flex-col gap-[16px]'>
             <p className='text-white text-[16px] leading-[24px] font-light'>My Account</p>
@@ -131,14 +133,13 @@ const Layout = () => {
             </div>
           </div>
 
-          <div className='flex flex-col gap-[24px]' data-aos="zoom-in-left" data-aos-duration="1250">
+          <div className='xs:hidden xl:flex flex-col gap-[24px]' data-aos="zoom-in-left" data-aos-duration="1250">
             <h4 className='text-white text-[20px] font-medium leading-[28px]'>Quick Link</h4>
             <div className='flex flex-col gap-[16px]'>
-            <p className='text-white text-[16px] leading-[24px] font-light'>My Account</p>
-            <p className='text-white text-[16px] leading-[24px] font-light'>Login / Register</p>
-            <p className='text-white text-[16px] leading-[24px] font-light'>Cart</p>
-            <p className='text-white text-[16px] leading-[24px] font-light'>Wishlist</p>
-            <p className='text-white text-[16px] leading-[24px] font-light'>Shop</p>
+            <p className='text-white text-[16px] leading-[24px] font-light'>Privacy Policy</p>
+            <p className='text-white text-[16px] leading-[24px] font-light'>Terms Of Use</p>
+            <p className='text-white text-[16px] leading-[24px] font-light'>FAQ</p>
+            <p className='text-white text-[16px] leading-[24px] font-light'>Contact</p>
             </div>
           </div>
 
