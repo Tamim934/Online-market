@@ -1,3 +1,4 @@
+
 import React from "react"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Layout from "./layout/Layout"
@@ -39,6 +40,7 @@ function App() {
     ])
 
     return <RouterProvider router = {isRouter}/>
+
 }
 
-export default App
+export default App;
