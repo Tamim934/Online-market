@@ -7,6 +7,7 @@ import Switcher from './components/Switcher'
 import { useTranslation } from "react-i18next"
 import {  IconButton } from '@mui/material';
 import TranslateIcon from '@mui/icons-material/Translate';
+import { Safi } from './components/Safisrc/Safi';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <>
+    
     <h1 className="text-3xl font-bold underline dark:bg-blue-950 dark:text-[#FFF]" data-aos="fade-right">
       Hello world!
     </h1>
@@ -32,6 +34,8 @@ function App() {
       <IconButton onClick={() => changeLanguage("en")}><TranslateIcon></TranslateIcon>En</IconButton>
       <IconButton onClick={() => changeLanguage("ru")}><TranslateIcon></TranslateIcon>Ru</IconButton>
     </div>
+
+
     </>
   )
 }

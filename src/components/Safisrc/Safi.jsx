@@ -22,7 +22,14 @@ export const Safi = () => {
     </div>
   
   
-    <div  className="container  w-[80%] ml-[10%] mt-[50px]">
+    <div className=' flex items-center ml-[160px] gap-[20px]'>
+
+<h1 className=" inline-block w-[20px] h-[40px] rounded-[4px] bg-[#DB4444]"></h1>
+          <h1 className= " inline-block text-[#DB4444] font-medium">Featured</h1>
+</div>
+ 
+<div  className="container  w-[80%] ml-[10%] mt-[50px]">
+  
     <div  class="num1">
   
   <img className=' float-right' src="src/components/Safisrc/attractive-woman-wearing-hat-posing-black-background 1.png" alt="" />
@@ -52,6 +59,33 @@ export const Safi = () => {
     </div>
   </div>
     
+  <div className=' flex w-[70%] justify-center gap-[80px] ml-[15%]  mt-[200px]' >
+<div>
+  <div className=' flex  justify-center'>
+  <img src="src/components/Safisrc/Services.png" alt="" />
+
+  </div>
+  <p className=' text-center  font-[600] text-[18px]  mt-[25px]'>FREE AND FAST DELIVERY</p>
+  <p className=' text-center mt-[10px] text-gray-700'>Free delivery for all orders over $140</p>
+</div>
+<div>
+  <div className=' flex  justify-center'>
+  <img src="src/components/Safisrc/Services (1).png" alt="" />
+
+  </div>
+  <p className=' text-center  font-[600] text-[18px]  mt-[25px]'>24/7 CUSTOMER SERVICE</p>
+  <p className=' text-center mt-[10px] text-gray-700'>Friendly 24/7 customer support</p>
+</div>
+<div>
+  <div className=' flex  justify-center'>
+  <img src="src/components/Safisrc/Services (2).png" alt="" />
+
+  </div>
+  <p className=' text-center  font-[600] text-[18px]  mt-[25px]'>MONEY BACK GUARANTEE</p>
+  <p className=' text-center mt-[10px] text-gray-700'>We reurn money within 30 days</p>
+</div>
+    </div>
+
     </div>
     </>
   )
