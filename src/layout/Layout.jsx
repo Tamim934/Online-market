@@ -77,7 +77,9 @@ const Layout = () => {
             <Link to="wishlist">
               <img src={notificationicon} alt="" data-aos="fade-left" data-aos-duration="1250"/>
             </Link>
-            <img src={carticon} alt="" data-aos="fade-left" data-aos-duration="1250"/>
+            <Link to="cart">
+              <img src={carticon} alt="" data-aos="fade-left" data-aos-duration="1250"/>
+            </Link>
             </div>
           <div className='xs:hidden lg:block' data-aos="zoom-in" data-aos-duration="1250">
             <Switcher/>

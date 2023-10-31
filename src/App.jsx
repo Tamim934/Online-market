@@ -6,6 +6,8 @@ import Contact from "./pages/contact/Contact"
 import About from "./pages/about/About"
 import SignUp from "./pages/signup/SignUp"
 import WishList from "./pages/wishlist/WishList"
+import Cart from "./pages/cart/Cart"
+import CheckOut from "./pages/checkout/CheckOut"
 import NotFound from "./pages/notfound/NotFound"
 
 function App() {
@@ -34,6 +36,16 @@ function App() {
                 {
                     path: "wishlist",
                     element: <WishList/>
+                },
+                {
+                    path: "cart",
+                    element: <Cart/>,
+                    children: [
+                        {
+                            path: "checkout",
+                            element: <CheckOut/>
+                        }
+                    ]
                 }
             ]
         },
