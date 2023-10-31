@@ -24,7 +24,7 @@ function App() {
     <>
     <h1 className="text-3xl font-bold underline dark:bg-blue-950 dark:text-[#FFF]" data-aos="fade-right">
       Hello world!
-    </h1>
+    </h1>                     
     <Burger/>
     <Switcher/>
     <h1>{t("hello")}</h1>
