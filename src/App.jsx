@@ -1,41 +1,44 @@
-import './App.css'
-import Burger from './components/Burger'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import React, {useEffect} from "react"
-import Switcher from './components/Switcher'
-import { useTranslation } from "react-i18next"
-import {  IconButton } from '@mui/material';
-import TranslateIcon from '@mui/icons-material/Translate';
-import Products from '../src/components/Products';
+import React from "react"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Layout from "./layout/Layout"
+import Home from "./pages/home/Home"
+import Contact from "./pages/contact/Contact"
+import About from "./pages/about/About"
+import SignUp from "./pages/signup/SignUp"
+import NotFound from "./pages/notfound/NotFound"
 
 function App() {
 
-  useEffect(() => {
-    AOS.init();
-  }, [])
+    const isRouter = createBrowserRouter([
+        {
+            path: "/",
+            element: <Layout/>,
+            children: [
+                {
+                    index: true,
+                    element: <Home/>
+                },
+                {
+                    path: "contact",
+                    element: <Contact/>
+                },
+                {
+                    path: "about",
+                    element: <About/>
+                },
+                {
+                    path: "signup",
+                    element: <SignUp/>
+                }
+            ]
+        },
+        {
+            path: "*",
+            element: <NotFound/>
+        }
+    ])
 
-  const {t, i18n } = useTranslation()
-
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language)
-  }
-
-  return (
-    <>
-    <h1 className="text-3xl font-bold underline dark:bg-blue-950 dark:text-[#FFF]" data-aos="fade-right">
-      Hello world!
-      </h1>
-      <Products/>
-    <Burger/>
-    <Switcher/>
-    <h1>{t("hello")}</h1>
-    <div className='flex'>
-      <IconButton onClick={() => changeLanguage("en")}><TranslateIcon></TranslateIcon>En</IconButton>
-      <IconButton onClick={() => changeLanguage("ru")}><TranslateIcon></TranslateIcon>Ru</IconButton>
-    </div>
-    </>
-  )
+    return <RouterProvider router = {isRouter}/>
 }
 
 export default App
