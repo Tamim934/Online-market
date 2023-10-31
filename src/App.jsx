@@ -7,6 +7,7 @@ import Switcher from './components/Switcher'
 import { useTranslation } from "react-i18next"
 import {  IconButton } from '@mui/material';
 import TranslateIcon from '@mui/icons-material/Translate';
+import Products from '../src/components/Products';
 
 function App() {
 
@@ -24,7 +25,8 @@ function App() {
     <>
     <h1 className="text-3xl font-bold underline dark:bg-blue-950 dark:text-[#FFF]" data-aos="fade-right">
       Hello world!
-    </h1>
+      </h1>
+      <Products/>
     <Burger/>
     <Switcher/>
     <h1>{t("hello")}</h1>
