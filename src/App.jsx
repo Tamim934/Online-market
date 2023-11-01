@@ -6,6 +6,9 @@ import Home from "./pages/home/Home"
 import Contact from "./pages/contact/Contact"
 import About from "./pages/about/About"
 import SignUp from "./pages/signup/SignUp"
+import WishList from "./pages/wishlist/WishList"
+import Cart from "./pages/cart/Cart"
+import CheckOut from "./pages/checkout/CheckOut"
 import NotFound from "./pages/notfound/NotFound"
 
 function App() {
@@ -30,6 +33,18 @@ function App() {
                 {
                     path: "signup",
                     element: <SignUp/>
+                },
+                {
+                    path: "wishlist",
+                    element: <WishList/>
+                },
+                {
+                    path: "cart",
+                    element: <Cart/>,
+                },
+                {
+                    path: "checkout",
+                    element: <CheckOut/>
                 }
             ]
         },
