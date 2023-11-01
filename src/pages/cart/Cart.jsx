@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import CartList from '../../components/TamimCatagories/Cart.jsx/CartList'
 
 const Cart = () => {
     
@@ -7,7 +8,8 @@ const Cart = () => {
 
   return (
     <div>
-        <button onClick={() => navigate("/checkout")} className='bg-slate-500 text-white font-medium'>☻ MuhammadSurur ☻</button>
+      <CartList/>
+      
     </div>
   )
 }

@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next'
 import searchicon from '../assets/searchicon.svg'
 import notificationicon from '../assets/notificationicon.svg'
 import carticon from '../assets/carticon.svg'
+import usericon from '../assets/usericon.svg'
 import airplaneicon from '../assets/airplaneicon.svg'
 import qrcode from '../assets/qrcode.svg'
 import googleplay from '../assets/googleplay.svg'
@@ -45,8 +46,8 @@ const Layout = () => {
           <div className='m-auto w-[85%] h-[48px] flex items-center justify-between sm:justify-center gap-[231px]'>
           <p className='text-[#FAFAFA] text-[14px]' data-aos="fade-up" data-aos-duration="1250">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!   <b className='underline font-semibold'>ShopNow</b></p>
           <ul className='hidden lg:flex lg:gap-[8px] xl:absolute xl:right-[136px]'>
-            <li className='text-[16px] font-semibold cursor-pointer' style={{color: active == "en" ? "lime" : "lightgray"}} onClick={() => changeLanguage("en")} data-aos="fade-left" data-aos-duration="1250">EN</li>
-            <li className='text-[16px] font-semibold cursor-pointer' style={{color: active == "ru" ? "lime" : "lightgray"}} onClick={() => changeLanguage("ru")} data-aos="fade-left" data-aos-duration="1250">RU</li>
+            <li className='text-[16px] font-medium cursor-pointer' style={{color: active == "en" ? "lime" : "lightgray"}} onClick={() => changeLanguage("en")} data-aos="fade-left" data-aos-duration="1250">EN</li>
+            <li className='text-[16px] font-medium cursor-pointer' style={{color: active == "ru" ? "lime" : "lightgray"}} onClick={() => changeLanguage("ru")} data-aos="fade-left" data-aos-duration="1250">RU</li>
           </ul>
           </div>
         </div>
@@ -80,8 +81,11 @@ const Layout = () => {
             <Link to="cart">
               <img src={carticon} alt="" data-aos="fade-left" data-aos-duration="1250"/>
             </Link>
+            <Link to="account">
+              <img src={usericon} alt="" data-aos="fade-left" data-aos-duration="1250"/>
+            </Link>
             </div>
-          <div className='hidden lg:block' data-aos="zoom-in" data-aos-duration="1250">
+          <div className='hidden lg:block' data-aos="zoom-in" data-aos-duration="1500">
             <Switcher/>
           </div>
           <div className='block lg:hidden' data-aos="zoom-in" data-aos-duration="1250">
