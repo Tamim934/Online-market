@@ -41,7 +41,7 @@ export default function Burger() {
   const active  = localStorage.getItem("i18nextLng")
 
   const list = (anchor) => (
-    <div className='h-[100%]'>
+    <div className='h-[100%] lg:hidden'>
       <div className='flex justify-center items-center gap-[60px] my-10'>
         <ul className='xs:flex xs:gap-[8px] xl:absolute xl:right-[136px]'>
           <li className='text-[16px] font-semibold cursor-pointer' style={{color: active == "en" ? "green" : "gray"}} onClick={() => changeLanguage("en")}>EN</li>
