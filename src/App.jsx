@@ -12,8 +12,27 @@ import Account from "./pages/account/Account"
 import NotFound from "./pages/notfound/NotFound"
 
 function App() {
-
-    const isRouter = createBrowserRouter([
+  const isRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "contact",
+          element: <Contact />,
+        },
+        {
+          path: "about",
+          element: <About />,
+        },
+        {
+          path: "signup",
+          element: <SignUp />,
+        },
         {
             path: "/",
             element: <Layout/>,
@@ -51,14 +70,26 @@ function App() {
                     element: <Account/>
                 }
             ]
+          path: "wishlist",
+          element: <WishList />,
         },
         {
-            path: "*",
-            element: <NotFound/>
-        }
-    ])
+          path: "cart",
+          element: <Cart />,
+        },
+        {
+          path: "checkout",
+          element: <CheckOut />,
+        },
+      ],
+    },
+    {
+      path: "*",
+      element: <NotFound />,
+    },
+  ]);
 
-    return <RouterProvider router = {isRouter}/>
+  return <RouterProvider router={isRouter} />;
 }
 
-export default App
+export default App;
