@@ -21,7 +21,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const AmsCard = () => {
   return (
-    <div>
+    <div className="container">
       <div className="top mb-10">
         <div className="mb-8">
           <span className="py-2 mr-5 px-2.5 rounded bg-[#DB4444]"></span>

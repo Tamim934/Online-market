@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Checkout from "../../components/AMsurur/Checkout";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div>
+      <Checkout />
+    </div>
+  );
+};
 
-export default Home
+export default Home;
