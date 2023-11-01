@@ -1,4 +1,5 @@
 
+
 import '../../App.css'
 // import Burger from './components/Burger'
 import AOS from 'aos';
@@ -29,11 +30,12 @@ import SwiperProduct from '../../components/HomeComponents/SwiperProduct';
 import Button240px from '../../components/HomeComponents/Button240px';
 import CategoryCard from '../../components/HomeComponents/CategoryCard';
 import ProductCard from '../../components/HomeComponents/ProductCard';
+import Catagories from '../../components/TamimCatagories/Catagories';
 
 const Home = () => {
   return (
     <div className='dark:text-[#fff]'>
-      <div className="w-[90%] md:w-[80%] mx-auto py-[40px]">
+      <div className="w-[90%] md:w-[85%] mx-auto py-[40px]">
         <div className="md:flex justify-between items-center mb-[70px] md:mb-[140px]">
           <div className="">
             <h3 className='font-[600] mb-[16px]'>Woman’s Fashion</h3>
@@ -108,12 +110,13 @@ const Home = () => {
             </div>
           </div>
           <div className="sm:flex justify-between flex-wrap">
-            <CategoryCard image={phoneCategory} text={'Phones'} />
+            {/* <CategoryCard image={phoneCategory} text={'Phones'} />
             <CategoryCard image={computersCategory} text={'Phones'} />
             <CategoryCard image={watchCategory} text={'Phones'} />
             <CategoryCard image={cameraCategory} text={'Phones'} />
             <CategoryCard image={headPhoneCategory} text={'Phones'} />
-            <CategoryCard image={gamingCategory} text={'Phones'} />
+            <CategoryCard image={gamingCategory} text={'Phones'} /> */}
+            <Catagories/>
           </div>
         </div>
         <hr className='border-[1px]' />
@@ -227,4 +230,7 @@ const Home = () => {
   )
 }
 
-export default Home
+
+
+
+export default Home;
