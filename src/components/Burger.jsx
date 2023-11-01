@@ -3,13 +3,6 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton } from '@mui/material';
 import { useTranslation } from 'react-i18next'
@@ -44,8 +37,8 @@ export default function Burger() {
     <div className='h-[100%] lg:hidden'>
       <div className='flex justify-center items-center gap-[60px] my-10'>
         <ul className='xs:flex xs:gap-[8px] xl:absolute xl:right-[136px]'>
-          <li className='text-[16px] font-semibold cursor-pointer' style={{color: active == "en" ? "green" : "gray"}} onClick={() => changeLanguage("en")}>EN</li>
-          <li className='text-[16px] font-semibold cursor-pointer' style={{color: active == "ru" ? "green" : "gray"}} onClick={() => changeLanguage("ru")}>RU</li>
+          <li className='text-[16px] font-medium cursor-pointer' style={{color: active == "en" ? "green" : "gray"}} onClick={() => changeLanguage("en")}>EN</li>
+          <li className='text-[16px] font-medium cursor-pointer' style={{color: active == "ru" ? "green" : "gray"}} onClick={() => changeLanguage("ru")}>RU</li>
         </ul>
         <div>
           <Switcher/>

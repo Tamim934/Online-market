@@ -8,6 +8,7 @@ import SignUp from "./pages/signup/SignUp"
 import WishList from "./pages/wishlist/WishList"
 import Cart from "./pages/cart/Cart"
 import CheckOut from "./pages/checkout/CheckOut"
+import Account from "./pages/account/Account"
 import NotFound from "./pages/notfound/NotFound"
 
 function App() {
@@ -44,6 +45,10 @@ function App() {
                 {
                     path: "checkout",
                     element: <CheckOut/>
+                },
+                {
+                    path: "account",
+                    element: <Account/>
                 }
             ]
         },
