@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-
+import { useNavigate } from 'react-router-dom'
 const CartList = () => {
+  const navigate = useNavigate()
   const [products, setProducts] = useState([
     {
       name: 'LCD Monitor',
@@ -98,7 +99,7 @@ const CartList = () => {
       <h1>${total}</h1>
     </div>
     <div className='flex pl-[70px] pt-[20px]'>
-    <button className='w-[260px] h-[56px] max600:w-[200px] bg-[#DB4444] text-white rounded-[4px]'>Procees to checkout</button>
+    <button className='w-[260px] h-[56px] max600:w-[200px] bg-[#DB4444] text-white rounded-[4px]' onClick={() => navigate("/checkout")} >Procees to checkout</button>
     </div>
       </div>
     </div>
