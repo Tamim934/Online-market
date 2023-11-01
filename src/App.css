@@ -1,3 +1,7 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+
+.phoneandmail{
+    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+}

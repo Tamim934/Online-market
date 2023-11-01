@@ -39,10 +39,10 @@ const Layout = () => {
 
 
 
-      <div className='navbar xs:m-auto'>
+      <div className='navbar m-auto overflow-x-hidden'>
 
         <div className='bg-black'>
-          <div className='xs:m-auto xs:w-[85%] h-[48px] xs:flex xs:items-center xs:justify-between sm:justify-center xs:gap-[231px]'>
+          <div className='m-auto w-[85%] h-[48px] flex items-center justify-between sm:justify-center gap-[231px]'>
           <p className='text-[#FAFAFA] text-[14px]' data-aos="fade-up" data-aos-duration="1250">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!   <b className='underline font-semibold'>ShopNow</b></p>
           <ul className='hidden lg:flex lg:gap-[8px] xl:absolute xl:right-[136px]'>
             <li className='text-[16px] font-semibold cursor-pointer' style={{color: active == "en" ? "lime" : "lightgray"}} onClick={() => changeLanguage("en")} data-aos="fade-left" data-aos-duration="1250">EN</li>
@@ -53,7 +53,7 @@ const Layout = () => {
 
         <br /><br />
 
-        <div className='xs:m-auto xs:w-[85%] flex justify-between'>
+        <div className='m-auto w-[85%] flex justify-between'>
           <div>
             <h1 className='text-black text-[24px] font-bold leading-[24px] tracking-[0.72px]' data-aos="fade-right" data-aos-duration="1250">Exclusive</h1>
           </div>
@@ -71,7 +71,7 @@ const Layout = () => {
               <li style={{textDecoration: pathname == "/signup" ? "underline" : "none"}} className='cursor-pointer' data-aos="fade-down" data-aos-duration="1250">Sign Up</li>
             </Link>
           </ul>
-          <div className='xs:flex xs:items-center xs:gap-[24px]'>
+          <div className='flex items-center gap-[24px]'>
             <input type="search" name="" id="" placeholder='What are you looking for?' className='w-[243px] h-[38px] rounded-[4px] bg-[#F5F5F5] text-[#7A7A7A] text-[12px] font-medium py-[7px] pl-[20px] pr-[12px] outline-none' data-aos="fade-left" data-aos-duration="1250"/>
             <div className='flex items-center gap-[16px]'>
             <Link to="wishlist">
@@ -81,10 +81,10 @@ const Layout = () => {
               <img src={carticon} alt="" data-aos="fade-left" data-aos-duration="1250"/>
             </Link>
             </div>
-          <div className='xs:hidden lg:block' data-aos="zoom-in" data-aos-duration="1250">
+          <div className='hidden lg:block' data-aos="zoom-in" data-aos-duration="1250">
             <Switcher/>
           </div>
-          <div className='xs:block lg:hidden' data-aos="zoom-in" data-aos-duration="1250">
+          <div className='block lg:hidden' data-aos="zoom-in" data-aos-duration="1250">
             <Burger/>
           </div>
           </div>
@@ -98,13 +98,13 @@ const Layout = () => {
       <div className='dark:bg-[#272727]'>
         <Outlet/>
       </div>
-      <div className='footer xs:m-auto'>
+      <div className='footer m-auto overflow-x-hidden'>
 
-        <div className='bg-black xs:m-auto'>
+        <div className='bg-black m-auto'>
 
         <br /><br /><br />
 
-        <div className='xs:m-auto xs:w-[85%] xs:flex xs:flex-col xs:gap-[48px] sm:flex-row sm:gap-0  sm:justify-between'>
+        <div className='m-auto w-[85%] flex flex-col items-center gap-[48px] sm:flex-row sm:gap-0  sm:justify-between'>
 
           <div className='flex flex-col gap-[24px]' data-aos="zoom-out-right" data-aos-duration="1250">
             <h1 className='text-white text-[24px] font-bold leading-[24px] tracking-[0.72px]'>Exclusive</h1>
@@ -115,7 +115,7 @@ const Layout = () => {
             </div>
           </div>
 
-          <div className='xs:hidden xl:flex flex-col gap-[24px]' data-aos="zoom-in-right" data-aos-duration="1250">
+          <div className='hidden xl:flex flex-col gap-[24px]' data-aos="zoom-in-right" data-aos-duration="1250">
             <h4 className='text-white text-[20px] font-medium leading-[28px]'>Support</h4>
             <div className='flex flex-col gap-[16px]'>
             <p className='text-white text-[16px] leading-[24px] font-light'>111 Bijoy sarani, Dhaka,<br />DH 1515, Bangladesh.</p>
@@ -124,7 +124,7 @@ const Layout = () => {
             </div>
           </div>
 
-          <div className='xs:hidden md:flex flex-col gap-[24px]' data-aos="zoom-out-down" data-aos-duration="1250">
+          <div className='hidden md:flex flex-col gap-[24px]' data-aos="zoom-out-down" data-aos-duration="1250">
             <h4 className='text-white text-[20px] font-medium leading-[28px]'>Account</h4>
             <div className='flex flex-col gap-[16px]'>
             <p className='text-white text-[16px] leading-[24px] font-light'>My Account</p>
@@ -135,7 +135,7 @@ const Layout = () => {
             </div>
           </div>
 
-          <div className='xs:hidden xl:flex flex-col gap-[24px]' data-aos="zoom-in-left" data-aos-duration="1250">
+          <div className='hidden xl:flex flex-col gap-[24px]' data-aos="zoom-in-left" data-aos-duration="1250">
             <h4 className='text-white text-[20px] font-medium leading-[28px]'>Quick Link</h4>
             <div className='flex flex-col gap-[16px]'>
             <p className='text-white text-[16px] leading-[24px] font-light'>Privacy Policy</p>

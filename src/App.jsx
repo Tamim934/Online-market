@@ -40,12 +40,10 @@ function App() {
                 {
                     path: "cart",
                     element: <Cart/>,
-                    children: [
-                        {
-                            path: "checkout",
-                            element: <CheckOut/>
-                        }
-                    ]
+                },
+                {
+                    path: "checkout",
+                    element: <CheckOut/>
                 }
             ]
         },

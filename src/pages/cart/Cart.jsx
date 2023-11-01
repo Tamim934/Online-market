@@ -7,7 +7,7 @@ const Cart = () => {
 
   return (
     <div>
-        <button onClick={() => navigate("checkout")} className='bg-slate-500 text-white font-medium'>☻ MuhammadSurur ☻</button>
+        <button onClick={() => navigate("/checkout")} className='bg-slate-500 text-white font-medium'>☻ MuhammadSurur ☻</button>
     </div>
   )
 }
