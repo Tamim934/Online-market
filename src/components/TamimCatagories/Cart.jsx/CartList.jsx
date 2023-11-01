@@ -37,7 +37,7 @@ const CartList = () => {
     setProducts(newProducts);
   };
   return (
-    <div className=' mt-[50px]'>
+    <div className=' pt-[50px]'>
 
 
     <div className='mt-[00px] ml-[350px] max2:ml-[100px] max3:ml-[0] max3:text-center gap-[5px] dark:text-white'>
