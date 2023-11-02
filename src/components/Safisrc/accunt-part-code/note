@@ -1,0 +1,53 @@
+    <!-- <div>
+      <div className=' flex justify-between w-[82%] ml-[8%] mt-[60px]'>
+        <p><span className=' text-gray-700'>Home</span> / My Account</p>
+        <p>Welcome! <span className=' text-[#DB4444]'>Md Rimel</span></p>
+      </div>
+      <div className=' flex mt-[100px]'>
+
+      <div className='  w-[20%] ml-[8%] '>
+        <p className=' text-[18px] font-[600]'>Manage My Account</p>
+        <div className=' ml-[40px] mt-[10px]'>
+          <p className=' text-red-400'>My Profile</p>
+          <p className=' mt-[10px] text-gray-600 '> Address Book</p>
+          <p className=' mt-[10px] text-gray-600'> My Payment Options</p>
+        </div>
+        <p className=' text-[18px] font-[600]  mt-[30px] '>My Orders</p>
+        <div className=' ml-[40px] mt-[10px]'>
+          <p className=' mt-[10px] text-gray-600 '> My Returns</p>
+          <p className=' mt-[10px] text-gray-600'> My Cancellations</p>
+        </div>
+        <p className=' text-[18px] font-[600] mt-[20px]'>My WishList</p>
+      </div>
+      <div id='border' className=' w-[63%] '>
+        <div className=' w-[80%] pt-[20px]  pb-[20px]  ml-[10%]'>
+                 <p className=' text-red-400 text-[20px] font-[500]'>Edit Your Profile</p>
+             <div className=' flex justify-between w-[68%] mt-[20px]'>
+                <p>First Name</p>
+                <p>Last Name</p>
+             </div>
+             <div className=' mt-[10px] flex justify-between'>
+                <input type="search" name="" id="" placeholder='What are you looking for?' className='w-[45%] h-[38px] rounded-[4px] bg-[#F5F5F5] text-[#7A7A7A] text-[12px] font-medium py-[7px] pl-[20px] pr-[12px] outline-none' />
+                <input type="search" name="" id="" placeholder='What are you looking for?' className='w-[45%] h-[38px] rounded-[4px] bg-[#F5F5F5] text-[#7A7A7A] text-[12px] font-medium py-[7px] pl-[20px] pr-[12px] outline-none' />
+             </div>
+             <div className=' flex justify-between w-[68%] mt-[20px]'>
+                <p>Email</p>
+                <p>Address</p>
+             </div>
+             <div className=' mt-[10px] flex justify-between'>
+                <input type="search" name="" id="" placeholder='What are you looking for?' className='w-[45%] h-[38px] rounded-[4px] bg-[#F5F5F5] text-[#7A7A7A] text-[12px] font-medium py-[7px] pl-[20px] pr-[12px] outline-none' />
+                <input type="search" name="" id="" placeholder='What are you looking for?' className='w-[45%] h-[38px] rounded-[4px] bg-[#F5F5F5] text-[#7A7A7A] text-[12px] font-medium py-[7px] pl-[20px] pr-[12px] outline-none' />
+             </div>
+               <p className=' mt-[20px]'>Password Changes</p>
+               <input type="search" name="" id="" placeholder='What are you looking for?' className=' mt-[10px] w-[100%] h-[38px] rounded-[4px] bg-[#F5F5F5] text-[#7A7A7A] text-[12px] font-medium py-[7px] pl-[20px] pr-[12px] outline-none' />
+               <input type="search" name="" id="" placeholder='What are you looking for?' className=' mt-[10px] w-[100%] h-[38px] rounded-[4px] bg-[#F5F5F5] text-[#7A7A7A] text-[12px] font-medium py-[7px] pl-[20px] pr-[12px] outline-none' />
+               <input type="search" name="" id="" placeholder='What are you looking for?' className=' mt-[10px] w-[100%] h-[38px] rounded-[4px] bg-[#F5F5F5] text-[#7A7A7A] text-[12px] font-medium py-[7px] pl-[20px] pr-[12px] outline-none' />
+           <div className='  gap-[40px] mt-[30px] flex justify-end '>
+                <button className=' font-[500]'>Cancel</button>
+                <button className=' rounded-[5px] text-white w-[200px] h-[50px] bg-[#DB4444]'> Save Changes</button>
+           </div>
+        </div>
+      </div>
+      </div>
+    </div> -->
+    
