@@ -1,5 +1,6 @@
-
-
+import React, { useEffect } from 'react'
+import ProductDetalis from '../../components/Productsicons/ProductDetalis'
+import axios from 'axios';
 import '../../App.css'
 // import Burger from './components/Burger'
 import AOS from 'aos';
@@ -32,8 +33,26 @@ import CategoryCard from '../../components/HomeComponents/CategoryCard';
 import ProductCard from '../../components/HomeComponents/ProductCard';
 import Catagories from '../../components/TamimCatagories/Catagories';
 
+
 const Home = () => {
+  
+  const Api = "http://localhost:3000/products";
+  async function getData() {
+    try {
+      const { data } = await axios.get(Api);
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    getData();
+  },[])
   return (
+
+    <div>
+      <ProductDetalis/>
     <div className='dark:text-[#fff]'>
       <div className="w-[90%] md:w-[85%] mx-auto py-[40px]">
         <div className="md:flex justify-between items-center mb-[70px] md:mb-[140px]">
