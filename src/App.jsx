@@ -10,29 +10,11 @@ import Cart from "./pages/cart/Cart"
 import CheckOut from "./pages/checkout/CheckOut"
 import Account from "./pages/account/Account"
 import NotFound from "./pages/notfound/NotFound"
+import Catagorepage from "./pages/Catagorie/Catagorepage"
 
 function App() {
-  const isRouter = createBrowserRouter([
-    {
-      path: "/",
-      element: <Layout />,
-      children: [
-        {
-          index: true,
-          element: <Home />,
-        },
-        {
-          path: "contact",
-          element: <Contact />,
-        },
-        {
-          path: "about",
-          element: <About />,
-        },
-        {
-          path: "signup",
-          element: <SignUp />,
-        },
+
+    const isRouter = createBrowserRouter([
         {
             path: "/",
             element: <Layout/>,
@@ -68,28 +50,20 @@ function App() {
                 {
                     path: "account",
                     element: <Account/>
+                },
+                {
+                    path: "catagorepage",
+                    element: <Catagorepage/>
                 }
             ]
-          path: "wishlist",
-          element: <WishList />,
         },
         {
-          path: "cart",
-          element: <Cart />,
-        },
-        {
-          path: "checkout",
-          element: <CheckOut />,
-        },
-      ],
-    },
-    {
-      path: "*",
-      element: <NotFound />,
-    },
-  ]);
+            path: "*",
+            element: <NotFound/>
+        }
+    ])
 
-  return <RouterProvider router={isRouter} />;
+    return <RouterProvider router = {isRouter}/>
 }
 
-export default App;
+export default App

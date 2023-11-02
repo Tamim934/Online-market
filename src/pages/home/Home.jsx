@@ -4,7 +4,7 @@ import '../../App.css'
 // import Burger from './components/Burger'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 
 import { useTranslation } from "react-i18next"
 import { IconButton } from '@mui/material';
@@ -31,8 +31,32 @@ import Button240px from '../../components/HomeComponents/Button240px';
 import CategoryCard from '../../components/HomeComponents/CategoryCard';
 import ProductCard from '../../components/HomeComponents/ProductCard';
 import Catagories from '../../components/TamimCatagories/Catagories';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 const Home = () => {
+  const { category } = useParams();
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const api=`http://localhost:3000/api/products?category=${category}`;
+
+const getData = async () => {
+  try {
+      const { data } = await axios.get(api);
+      return data;
+  } catch (error) {
+      console.error(error);
+  }
+};
+
+
+useEffect(() => {
+  getData().then(data => {
+    setProducts(data);
+    setLoading(false);
+  });
+}, [category]);
   return (
     <div className='dark:text-[#fff]'>
       <div className="w-[90%] md:w-[85%] mx-auto py-[40px]">
@@ -109,7 +133,7 @@ const Home = () => {
               <img src={toRight} alt="" />
             </div>
           </div>
-          <div className="sm:flex justify-between flex-wrap">
+          {/* <div className="sm:flex justify-between flex-wrap"> */}
             {/* <CategoryCard image={phoneCategory} text={'Phones'} />
             <CategoryCard image={computersCategory} text={'Phones'} />
             <CategoryCard image={watchCategory} text={'Phones'} />
@@ -117,7 +141,7 @@ const Home = () => {
             <CategoryCard image={headPhoneCategory} text={'Phones'} />
             <CategoryCard image={gamingCategory} text={'Phones'} /> */}
             <Catagories/>
-          </div>
+          {/* </div> */}
         </div>
         <hr className='border-[1px]' />
         <div className="my-[70px]">
@@ -136,10 +160,17 @@ const Home = () => {
             </div>
           </div>
           <div className="sm:flex justify-between flex-wrap">
-            <ProductCard img={jasket} name={'The north coat'} price={'$260'} />
-            <ProductCard img={bagGucci} name={'Gucci duffle bag'} price={'$960'} />
+          {products.map((product) => (
+                <div key={product.id} className="bg-[#000]">
+   <ProductCard img={product.img} name={product.name} price={product.price} />
+
+                  </div>
+                  ))}
+
+         
+            {/* <ProductCard img={bagGucci} name={'Gucci duffle bag'} price={'$960'} />
             <ProductCard img={speakers} name={'RGB liquid CPU Cooler'} price={'$160'} />
-            <ProductCard img={shelf} name={'Small BookSelf'} price={'$360'} />
+            <ProductCard img={shelf} name={'Small BookSelf'} price={'$360'} /> */}
           </div>
         </div>
         <div className="py-[30px] md:py-[70px] bg-black font-[600] px-[56px] md:flex justify-between my-[40px]">

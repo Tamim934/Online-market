@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -18,63 +18,65 @@ import TV from '../../assets/homeImg/TV.svg'
 import chair from '../../assets/homeImg/chair.svg'
 import Rating from './Rating'
 import ProductCard from './ProductCard';
+import { Try } from '@mui/icons-material';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 export default function SwiperProduct() {
-    return (
-        <div className='w-[]'>
-            <Swiper
-                slidesPerView={4}
-                centeredSlides={false}
-                // spaceBetween={10}
-                grabCursor={true}
-                // pagination={{
-                //     clickable: false,
-                // }}
-                modules={[Pagination]}
-                className="mySwiper"
-            >
-                <div className="bg-[#000]">
-                    <SwiperSlide>
-                        <ProductCard img={jostic} name="HAVIT HV-G92 Gamepad" price="$120" />
-                    </SwiperSlide>
-                </div>
-                <div className="bg-[#000]">
-                    <SwiperSlide>
-                        <ProductCard img={chair} name="HAVIT HV-G92 Gamepad" price="$120" />
-                    </SwiperSlide>
-                </div>
-                <div className="bg-[#000]">
-                    <SwiperSlide>
-                        <ProductCard img={TV} name="HAVIT HV-G92 Gamepad" price="$120" />
-                    </SwiperSlide>
-                </div>
-                <div className="bg-[#000]">
-                    <SwiperSlide>
-                        <ProductCard img={chair} name="HAVIT HV-G92 Gamepad" price="$120" />
-                    </SwiperSlide>
-                </div>
-                <div className="bg-[#000]">
-                    <SwiperSlide>
-                        <ProductCard img={jostic} name="HAVIT HV-G92 Gamepad" price="$120" />
-                    </SwiperSlide>
-                </div>
-                <div className="bg-[#000]">
-                    <SwiperSlide>
-                        <ProductCard img={chair} name="HAVIT HV-G92 Gamepad" price="$120" />
-                    </SwiperSlide>
-                </div>
-                <div className="bg-[#000]">
-                    <SwiperSlide>
-                        <ProductCard img={TV} name="HAVIT HV-G92 Gamepad" price="$120" />
-                    </SwiperSlide>
-                </div>
-                <div className="bg-[#000]">
-                    <SwiperSlide>
-                        <ProductCard img={chair} name="HAVIT HV-G92 Gamepad" price="$120" />
-                    </SwiperSlide>
-                </div>
+    
+    const { category } = useParams();
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const api=`http://localhost:3000/api/products?category=${category}`;
 
-            </Swiper>
-        </div>
+const getData = async () => {
+    try {
+        const { data } = await axios.get(api);
+        return data;
+        console.log(data)
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+
+useEffect(() => {
+    getData().then(data => {
+      setProducts(data);
+      setLoading(false);
+    });
+  }, [category]);
+
+
+if (loading) {
+    return <div>Loading...</div>; 
+}
+
+console.log(products);
+
+    return (
+        
+        <div className='w-[]'>
+        <Swiper
+            slidesPerView={4}
+            centeredSlides={false}
+            grabCursor={true}
+            modules={[Pagination]}
+            className="mySwiper"
+        >
+            {products.map((product) => (
+                <div key={product.id} className="bg-[#000]">
+                
+                    <SwiperSlide>
+                        <ProductCard 
+                            img={product.media[0]?.jpg} 
+                            name={product.name} 
+                            price={`$${product.price}`} 
+                        />
+                    </SwiperSlide>
+                </div>
+            ))}
+        </Swiper>
+    </div>
     );
 }

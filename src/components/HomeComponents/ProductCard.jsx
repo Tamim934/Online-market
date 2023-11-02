@@ -9,7 +9,7 @@ import Rating from './Rating'
 import RatingStar from './Rating'
 
 
-const ProductCard = ({ img, name, price }) => {
+const ProductCard = ({ img, name,price }) => {
 
     const [buttonBuy, setButtonBuy] = useState(false)
 
@@ -23,7 +23,7 @@ const ProductCard = ({ img, name, price }) => {
                     <img className='m-[12px]' src={heart} alt="" />
                 </div>
                 <div className="">
-                    <img src={img} className='mx-auto object-cover m-auto' style={{ height: buttonBuy ? '83%' : '90%'}} alt="" />
+                    <img src={img}  className='mx-auto object-cover m-auto' style={{ height: buttonBuy ? '83%' : '90%'}} alt="" />
                     <img src={eyes} className='absolute top-[50px] right-3 md:right-11' alt="" />
                 </div>
                 {
