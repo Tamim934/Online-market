@@ -30,6 +30,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.phoneandmail{
-    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+#border{
+ box-shadow: 0px 0px 5px 0px gray;
+ border-radius: 5px;
+}
+#border1{
+border: 1px solid rgb(189, 189, 189);
 }

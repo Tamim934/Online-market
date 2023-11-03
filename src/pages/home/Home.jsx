@@ -1,4 +1,5 @@
 
+import ProductDetalis from '../../components/Productsicons/ProductDetalis'
 
 import '../../App.css'
 // import Burger from './components/Burger'
@@ -34,7 +35,9 @@ import Catagories from '../../components/TamimCatagories/Catagories';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
+
 const Home = () => {
+
   const { category } = useParams();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -57,7 +60,11 @@ useEffect(() => {
     setLoading(false);
   });
 }, [category]);
+
   return (
+
+    <div>
+      {/* <ProductDetalis/> */}
     <div className='dark:text-[#fff]'>
       <div className="w-[90%] md:w-[85%] mx-auto py-[40px]">
         <div className="md:flex justify-between items-center mb-[70px] md:mb-[140px]">
@@ -257,6 +264,7 @@ useEffect(() => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }
