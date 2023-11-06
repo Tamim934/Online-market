@@ -1,0 +1,39 @@
+.container {  display: grid;
+
+    grid-template-columns: 44.3% 28.7% 27%;
+    grid-template-rows: 0.8fr 0.8fr;
+    grid-auto-columns: 1fr;
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "num4 num1 num1"
+      "num4 num3 num2";
+      
+  }
+  
+  .num1 { grid-area: num1; 
+  background-color: #000000;
+}
+  
+  .num2 { grid-area: num2; 
+  background-color: #000000;
+}
+  
+  .num3 { grid-area: num3; 
+  background-color: #000000;
+}
+  
+  .num4 { grid-area: num4; 
+  background-color: #000000;
+}
+  *{
+    font-family: 'Poppins', sans-serif;
+}
+
+#border{
+ box-shadow: 0px 0px 5px 0px gray;
+ border-radius: 5px;
+}
+#border1{
+border: 1px solid rgb(189, 189, 189);
+}
