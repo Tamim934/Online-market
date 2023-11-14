@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import heart from '../../assets/homeImg/heart.png'
 import eyes from '../../assets/homeImg/eyes.png'
@@ -8,8 +9,25 @@ import chair from '../../assets/homeImg/chair.svg'
 import Rating from './Rating'
 import RatingStar from './Rating'
 import { useNavigate } from 'react-router-dom'
+=======
+import React, { useEffect, useState } from "react";
+import heart from "../../assets/homeImg/heart.png";
+import eyes from "../../assets/homeImg/eyes.png";
+import jostic from "../../assets/homeImg/jostic.svg";
+import keyBoard from "../../assets/homeImg/keyboard.svg";
+import TV from "../../assets/homeImg/TV.svg";
+import chair from "../../assets/homeImg/chair.svg";
+import Rating from "./Rating";
+import RatingStar from "./Rating";
+import { useDispatch, useSelector } from "react-redux";
+import { AddToCart, GetCart } from "../../reducers/onlineShop";
+>>>>>>> 5acc7f17bce63067daf2890e62511e057e743df3
 
+const ProductCard = ({ img, name, price, e }) => {
+  const [buttonBuy, setButtonBuy] = useState(false);
+  const cartObj = useSelector((store) => store.onlineShop.cartObj);
 
+<<<<<<< HEAD
 const ProductCard = ({ img, name,price }) => {
 const navigate=useNavigate()
     const [buttonBuy, setButtonBuy] = useState(false)
@@ -30,6 +48,17 @@ const navigate=useNavigate()
 
         <div
       className="mx-auto w-[100%]  mb-[30px]"
+=======
+  // console.log(cartObj);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(GetCart());
+  }, [dispatch]);
+
+  return (
+    <div
+      className="w-[100%]  mb-[30px]"
+>>>>>>> 5acc7f17bce63067daf2890e62511e057e743df3
       onMouseLeave={() => setButtonBuy(false)}
       onMouseEnter={() => setButtonBuy(true)}
       onChange={(e) => setButtonBuy(e.target)}
@@ -65,8 +94,14 @@ const navigate=useNavigate()
         </div>
         {buttonBuy ? (
           <button
+<<<<<<< HEAD
             onClick={addToCart}
             
+=======
+            onClick={() => {
+              dispatch(AddToCart(e));
+            }}
+>>>>>>> 5acc7f17bce63067daf2890e62511e057e743df3
             className="w-[100%] h-[41px] text-[#fff] bg-black "
           >
             Add To Cart
@@ -84,7 +119,12 @@ const navigate=useNavigate()
         <RatingStar />
       </div>
     </div>
+<<<<<<< HEAD
     )
 }
+=======
+  );
+};
+>>>>>>> 5acc7f17bce63067daf2890e62511e057e743df3
 
-export default ProductCard
+export default ProductCard;

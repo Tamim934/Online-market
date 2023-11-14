@@ -84,10 +84,17 @@ const Layout = () => {
             </h1>
           </div>
           <ul className="hidden xl:flex xl:gap-[48px] xl:text-[16px] xl:leading-[24px] text-black">
+<<<<<<< HEAD
             <Link to="home">
               <li
                 style={{
                   textDecoration: pathname == "home" ? "underline" : "none",
+=======
+            <Link to="/">
+              <li
+                style={{
+                  textDecoration: pathname == "/" ? "underline" : "none",
+>>>>>>> 5acc7f17bce63067daf2890e62511e057e743df3
                 }}
                 className="cursor-pointer"
                 data-aos="fade-down"
@@ -351,4 +358,8 @@ const Layout = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Layout;
+=======
+export default Layout;
+>>>>>>> 5acc7f17bce63067daf2890e62511e057e743df3

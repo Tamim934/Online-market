@@ -7,7 +7,7 @@ import banks from "./img/Frame 834.svg";
 import { bgcolor } from "@mui/system";
 const Checkout = () => {
   return (
-    <div className="my-14 container  lg:mx-0 mx-auto">
+    <div className="my-14   lg:mx-0 mx-auto">
       <div className="w-[90%] mx-auto">
         <p className="text-gray-400 text-xs">
           Account  /  My Account  /  Product  /  View Cart  /{" "}

@@ -7,6 +7,10 @@ const AuthCheck = (props) => {
   //   let rememberMe = JSON.parse(localStorage.getItem("rememberMe"));
   useEffect(() => {
     if (token) {
+<<<<<<< HEAD
+=======
+      console.log(token);
+>>>>>>> 5acc7f17bce63067daf2890e62511e057e743df3
       return navigate("/");
     }
   }, [navigate]);

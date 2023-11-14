@@ -1,18 +1,23 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from 'react';
+=======
+import React, { useEffect, useRef, useState } from "react";
+>>>>>>> 5acc7f17bce63067daf2890e62511e057e743df3
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/pagination";
 
 // import './styles.css';
 
 // import required modules
-import { Pagination } from 'swiper/modules';
-// img 
-import jostic from '../../assets/homeImg/jostic.svg'
+import { Pagination } from "swiper/modules";
+// img
+import jostic from "../../assets/homeImg/jostic.svg";
 
+<<<<<<< HEAD
 import keyBoard from '../../assets/homeImg/keyboard.svg'
 import TV from '../../assets/homeImg/TV.svg'
 import chair from '../../assets/homeImg/chair.svg'
@@ -62,6 +67,33 @@ console.log(products[1]);
         // slidesPerView={1}
         // spaceBetween={10}
         centeredSlides={false}
+=======
+import keyBoard from "../../assets/homeImg/keyboard.svg";
+import TV from "../../assets/homeImg/TV.svg";
+import chair from "../../assets/homeImg/chair.svg";
+import Rating from "./Rating";
+import ProductCard from "./ProductCard";
+import { useDispatch, useSelector } from "react-redux";
+import { GetProducts } from "../../reducers/onlineShop";
+// const Api = "http://localhost:3000/products";
+// const PostImagesApi = "http://localhost:3000/products/?media";
+
+export default function SwiperProduct() {
+  const Products = useSelector((store) => store.onlineShop.Products);
+  console.log(Products);
+  // console.log(Products);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(GetProducts());
+  }, [dispatch]);
+  return (
+    <div className="w-[]">
+      <Swiper
+        // slidesPerView={4}
+        // slidesPerView={1}
+        // spaceBetween={10}
+        // centeredSlides={false}
+>>>>>>> 5acc7f17bce63067daf2890e62511e057e743df3
         breakpoints={{
           640: {
             slidesPerView: 2,
@@ -84,6 +116,7 @@ console.log(products[1]);
         modules={[Pagination]}
         className="mySwiper"
       >
+<<<<<<< HEAD
         {products?.map((product,i) => (
     <div key={product.id} >
         <SwiperSlide>
@@ -99,4 +132,25 @@ console.log(products[1]);
 </div>
 
     );
+=======
+        {Products.map((e, i) => {
+          console.log(e?.media?.map((e) => e.src));
+          return (
+            <div key={e?.id} className="">
+              <SwiperSlide>
+                <ProductCard
+                  // <img src={"http://localhost:3000/" + products[3]?.media[1]?.src} alt="s" />
+                  e={e}
+                  img={"http://localhost:3000/" + Products[i]?.media[0]?.src}
+                  name={e?.name}
+                  price={e?.price}
+                />
+              </SwiperSlide>
+            </div>
+          );
+        })}
+      </Swiper>
+    </div>
+  );
+>>>>>>> 5acc7f17bce63067daf2890e62511e057e743df3
 }

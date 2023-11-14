@@ -26,19 +26,31 @@ const SignUp = () => {
     event.preventDefault();
   };
   const Login = async () => {
+<<<<<<< HEAD
    console.log(userName, password);
+=======
+    console.log(1);
+>>>>>>> 5acc7f17bce63067daf2890e62511e057e743df3
     const obj = {
       email: userName,
       password: password,
     };
     try {
+<<<<<<< HEAD
       const { data } = await axios.post("http://localhost:3000/api/Login", obj);
+=======
+      const { data } = await axios.post("http://localhost:3000/api/login", obj);
+>>>>>>> 5acc7f17bce63067daf2890e62511e057e743df3
       console.log(data);
       saveToken(data.accessToken);
 
       setPassword("");
       setUserName("");
+<<<<<<< HEAD
       navigate("home");
+=======
+      navigate("/");
+>>>>>>> 5acc7f17bce63067daf2890e62511e057e743df3
     } catch (error) {
       console.log(error);
     }
@@ -101,4 +113,8 @@ const SignUp = () => {
   );
 };
 
+<<<<<<< HEAD
 export default SignUp;
+=======
+export default SignUp;
+>>>>>>> 5acc7f17bce63067daf2890e62511e057e743df3
