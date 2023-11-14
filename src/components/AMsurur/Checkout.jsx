@@ -54,7 +54,7 @@ const Checkout = () => {
               <p>Save this information for faster check-out next time</p>
             </span>
           </div>
-          <div className="lg:w-[70%] w-[95%] mt-16 lg:mt-10 mx-auto">
+          {/* <div className="lg:w-[70%] w-[95%] mt-16 lg:mt-10 mx-auto">
             <div className="flex w-[85%] mr-auto mb-5 items-center justify-between">
               <span className="flex gap-8 items-center">
                 {" "}
@@ -70,7 +70,7 @@ const Checkout = () => {
                 <p>LCD Monitor</p>
               </span>
               <span>$1100</span>
-            </div>
+            </div> */}
             <div className="w-[85%] mr-auto flex justify-between mt-10 border-b-2 pb-3">
               <span>Subtotal: </span>
               <span> $1750</span>
@@ -96,7 +96,7 @@ const Checkout = () => {
                 <span className="self-center">Cash on delivery</span>
               </span>
             </div>
-            <div className="mt-5 grid grid-cols-[1.7fr,1fr] gap-5">
+            <div className="mt-5 grid grid-cols-[1.7fr,1fr] gap-7">
               <input
                 type="text"
                 placeholder="Coupon Code"
@@ -106,13 +106,13 @@ const Checkout = () => {
                 Apply Coupon
               </button>
             </div>
-            <button className="mt-5 w-[40%] bg-[#DB4444] h-14 text-white rounded-md">
+            <button className="mt-5 w-[40%] bg-[#DB4444] h-14 text-white rounded-md ml-[40px]">
               Place Order
             </button>
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

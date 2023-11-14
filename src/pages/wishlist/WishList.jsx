@@ -1,8 +1,9 @@
 import React from 'react'
+import ProductDetalis from '../../components/Productsicons/ProductDetalis'
 
 const WishList = () => {
   return (
-    <div>WishList</div>
+    <div> <ProductDetalis/> </div>
   )
 }
 

@@ -52,31 +52,51 @@ if (loading) {
     return <div>Loading...</div>; 
 }
 
-console.log(products);
+console.log(products[1]);
 
     return (
         
         <div className='w-[]'>
-        <Swiper
-            slidesPerView={4}
-            centeredSlides={false}
-            grabCursor={true}
-            modules={[Pagination]}
-            className="mySwiper"
-        >
-            {products.map((product) => (
-                <div key={product.id} className="bg-[#000]">
-                
-                    <SwiperSlide>
-                        <ProductCard 
-                            img={product.media[0]?.jpg} 
-                            name={product.name} 
-                            price={`$${product.price}`} 
-                        />
-                    </SwiperSlide>
-                </div>
-            ))}
-        </Swiper>
+          <Swiper
+        // slidesPerView={4}
+        // slidesPerView={1}
+        // spaceBetween={10}
+        centeredSlides={false}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 5,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+        }}
+        // spaceBetween={10}
+        grabCursor={true}
+        // pagination={{
+        //     clickable: false,
+        // }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        {products?.map((product,i) => (
+    <div key={product.id} >
+        <SwiperSlide>
+            <ProductCard 
+                img={"http://localhost:3000/" + products[i]?.media[0]?.src} 
+                name={product.name} 
+                price={`$${product.price}`} 
+            />
+        </SwiperSlide>
     </div>
+))}
+</Swiper>
+</div>
+
     );
 }

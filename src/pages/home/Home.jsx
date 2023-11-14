@@ -34,6 +34,7 @@ import ProductCard from '../../components/HomeComponents/ProductCard';
 import Catagories from '../../components/TamimCatagories/Catagories';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import AmsCard from '../../components/AMsurur/AmsCard';
 
 
 const Home = () => {
@@ -152,6 +153,7 @@ useEffect(() => {
         </div>
         <hr className='border-[1px]' />
         <div className="my-[70px]">
+
           <div className="md:flex justify-between items-end mb-[60px]">
             <div className="flex items-end md:w-[50%] justify-between">
               <div className="">
@@ -166,14 +168,16 @@ useEffect(() => {
               <button className='w-[159px] h-[56px] bg-[#DB4444] rounded-[4px] text-[#fff] border-none'>View All</button>
             </div>
           </div>
-          <div className="sm:flex justify-between flex-wrap">
-          {products.map((product) => (
+          <div className="">
+          {/* {products.map((product,i) => (
                 <div key={product.id} className="bg-[#000]">
-   <ProductCard img={product.img} name={product.name} price={product.price} />
+   <ProductCard img={"http://localhost:3000/" + products[i]?.media[0]?.src} name={product.name} price={product.price} />
 
                   </div>
-                  ))}
+                  ))} */}
 
+<SwiperProduct />
+                    
          
             {/* <ProductCard img={bagGucci} name={'Gucci duffle bag'} price={'$960'} />
             <ProductCard img={speakers} name={'RGB liquid CPU Cooler'} price={'$160'} />
@@ -184,7 +188,7 @@ useEffect(() => {
           <div className="">
             <p className='text-[#00FF66] mb-[32px]'>Categories</p>
             <h2 className='text-[30px] md:text-[48px] font-[600] text-[#fff] mb-[32px]'>Enhance Your <br /> Music Experience</h2>
-            <div className="flex gap-[16px] mb-[40px]">
+            <div className="flex gap-[16px] mb-[40px] max:flex-wrap">
               <div className="rounded-[50%] bg-[#fff] p-[15px] w-[62px] h-[62px]">
                 <h2 className='font-[800] text-[11px] text-center'>{new Date().getDate()}</h2>
                 <p className='font-[600] text-[11px] text-center'>Days</p>
@@ -204,7 +208,7 @@ useEffect(() => {
             </div>
             <button className='w-[159px] h-[56px] bg-[#00FF66] rounded-[4px] text-[#fff] border-none'>Buy Now!</button>
           </div>
-          <img src={speakerBig} alt="" />
+          <img className='' src={speakerBig} alt="" />
         </div>
         <div className="md:flex justify-between items-end mb-[60px]">
           <div className="flex items-end md:w-[50%] justify-between">
@@ -221,15 +225,15 @@ useEffect(() => {
             <img src={toRight} alt="" />
           </div>
         </div>
-        <div className="sm:flex justify-between flex-wrap">
-          <ProductCard img={jasket} name={'The north coat'} price={'$260'} />
-          <ProductCard img={bagGucci} name={'Gucci duffle bag'} price={'$960'} />
-          <ProductCard img={speakers} name={'RGB liquid CPU Cooler'} price={'$160'} />
-          <ProductCard img={shelf} name={'Small BookSelf'} price={'$360'} />
-          <ProductCard img={shelf} name={'Small BookSelf'} price={'$360'} />
-          <ProductCard img={jasket} name={'The north coat'} price={'$260'} />
-          <ProductCard img={bagGucci} name={'Gucci duffle bag'} price={'$960'} />
-          <ProductCard img={speakers} name={'RGB liquid CPU Cooler'} price={'$160'} />
+        <div className="">
+        {/* {products.map((product,i) => (
+                <div key={product.id} className="bg-[#000]">
+   <ProductCard img={"http://localhost:3000/" + products[i]?.media[0]?.src} name={product.name} price={product.price} />
+
+                  </div>
+                  ))} */}
+                   <SwiperProduct />
+            <SwiperProduct />
         </div>
         <div className="flex justify-center my-[60px]">
           <Button240px text={'View All Products'} />

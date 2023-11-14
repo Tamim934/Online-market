@@ -1,8 +1,9 @@
 import React from 'react'
+import Checkout from '../../components/AMsurur/Checkout'
 
 const CheckOut = () => {
   return (
-    <div>CheckOut</div>
+    <div> <Checkout /></div>
   )
 }
 
