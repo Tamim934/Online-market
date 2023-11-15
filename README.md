@@ -28,4 +28,4 @@ Contributions to the online shop are welcome! Please fork the repository and cre
 
 ## License
 
-This project is licensed under the TAmim License.
+This project is licensed under the TAmim License!
